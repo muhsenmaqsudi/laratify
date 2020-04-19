@@ -1,0 +1,13 @@
+{
+    "name": "muhsenmaqsudi/laravel-componel",
+    "description": "Laravel 7 Component base panel UI package with automatic Crud app Scaffolding & generator",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "muhsenmaqsudi",
+            "email": "muhsenmaqsudi@gmail.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {}
+}
