@@ -9,5 +9,18 @@
             "role": "Developer"
         }
     ],
-    "require": {}
+    "require": {},
+    "require-dev": {
+        "orchestra/testbench": "^5.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "Muhsenmaqsudi\\Componel\\" : "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Muhsenmaqsudi\\Componel\\Tests\\": "tests/"
+        }
+    }
 }
