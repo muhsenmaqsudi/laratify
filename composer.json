@@ -9,7 +9,10 @@
             "role": "Developer"
         }
     ],
-    "require": {},
+    "require": {
+        "laravel/framework": "^7.0",
+        "laravel/ui": "^2.0"
+    },
     "require-dev": {
         "orchestra/testbench": "^5.1"
     },
@@ -21,6 +24,14 @@
     "autoload-dev": {
         "psr-4": {
             "Muhsenmaqsudi\\Componel\\Tests\\": "tests/"
+        }
+    },
+    "minimum-stability": "dev",
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Muhsenmaqsudi\\Componel\\Providers\\ComponelServiceProvider"
+            ]
         }
     }
 }
