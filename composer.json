@@ -11,7 +11,7 @@
     ],
     "require": {
         "laravel/framework": "^7.0",
-        "laravel/ui": "^2.0"
+        "ext-json": "*"
     },
     "require-dev": {
         "orchestra/testbench": "^5.1"
