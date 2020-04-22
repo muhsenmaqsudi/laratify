@@ -7,6 +7,7 @@ use Illuminate\Support\ServiceProvider;
 use Muhsenmaqsudi\Componel\Commands\UiCommand;
 use Muhsenmaqsudi\Componel\View\Components\Alert;
 use Muhsenmaqsudi\Componel\View\Components\Badge;
+use Muhsenmaqsudi\Componel\View\Components\Button;
 
 class ComponelServiceProvider extends ServiceProvider
 {
@@ -23,7 +24,8 @@ class ComponelServiceProvider extends ServiceProvider
 
         $this->loadViewComponentsAs('componel', [
             Alert::class,
-            Badge::class
+            Badge::class,
+            Button::class
         ]);
 
         Paginator::defaultView('pagination::default');

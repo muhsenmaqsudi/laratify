@@ -1,0 +1,1 @@
+<button class="{{ $mainClasses }}" type="button">{{ $slot }}</button>
