@@ -3,11 +3,8 @@
 
 namespace Muhsenmaqsudi\Componel\Presets;
 
-use Illuminate\Container\Container;
 use Illuminate\Filesystem\Filesystem;
 use Illuminate\Support\Arr;
-use Illuminate\Support\Str;
-use Symfony\Component\Finder\SplFileInfo;
 
 class TailwindCSS extends Preset
 {
