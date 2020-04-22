@@ -6,6 +6,7 @@ use Illuminate\Pagination\Paginator;
 use Illuminate\Support\ServiceProvider;
 use Muhsenmaqsudi\Componel\Commands\UiCommand;
 use Muhsenmaqsudi\Componel\View\Components\Alert;
+use Muhsenmaqsudi\Componel\View\Components\Badge;
 
 class ComponelServiceProvider extends ServiceProvider
 {
@@ -21,7 +22,8 @@ class ComponelServiceProvider extends ServiceProvider
         $this->publishes([__DIR__ . '/../../resources/views' => resource_path('views/vendor/componel')], 'componel-views');
 
         $this->loadViewComponentsAs('componel', [
-            Alert::class
+            Alert::class,
+            Badge::class
         ]);
 
         Paginator::defaultView('pagination::default');
