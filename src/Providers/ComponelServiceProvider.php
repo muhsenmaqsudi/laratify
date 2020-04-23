@@ -8,6 +8,7 @@ use Muhsenmaqsudi\Componel\Commands\UiCommand;
 use Muhsenmaqsudi\Componel\View\Components\Alert;
 use Muhsenmaqsudi\Componel\View\Components\Badge;
 use Muhsenmaqsudi\Componel\View\Components\Button;
+use Muhsenmaqsudi\Componel\View\Components\Input;
 
 class ComponelServiceProvider extends ServiceProvider
 {
@@ -25,7 +26,8 @@ class ComponelServiceProvider extends ServiceProvider
         $this->loadViewComponentsAs('componel', [
             Alert::class,
             Badge::class,
-            Button::class
+            Button::class,
+            Input::class
         ]);
 
         Paginator::defaultView('pagination::default');

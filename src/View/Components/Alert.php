@@ -1,6 +1,6 @@
 <?php
 
-namespace Muhsenmaqsudi\Componel\View\Components;;
+namespace Muhsenmaqsudi\Componel\View\Components;
 
 use Illuminate\View\Component;
 
