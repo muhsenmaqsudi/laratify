@@ -10,8 +10,9 @@
         }
     ],
     "require": {
-        "laravel/framework": "^7.0",
-        "ext-json": "*"
+        "php": "^7.3",
+        "ext-json": "*",
+        "laravel/framework": "^7.0"
     },
     "require-dev": {
         "orchestra/testbench": "^5.1"
