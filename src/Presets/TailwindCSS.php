@@ -10,7 +10,9 @@ class TailwindCSS extends Preset
 {
     public static function install()
     {
+        // updating devDependencies packages
         static::updatePackages();
+        static::updatePackages(false);
         static::updateStyles();
         static::updateBootstrapping();
         static::updatePagination();
@@ -24,21 +26,29 @@ class TailwindCSS extends Preset
         static::updateViews();
     }
 
-    protected static function updatePackageArray(array $packages)
+    protected static function updatePackageArray(array $packages, $configKey)
     {
-        return array_merge([
-            'laravel-mix' => '^5.0.1',
-            'laravel-mix-purgecss' => '^4.1',
-            'laravel-mix-tailwind' => '^0.1.0',
-            'tailwindcss' => '^1.0',
-            '@tailwindcss/custom-forms' => '^0.2',
-        ], Arr::except($packages, [
-            'bootstrap',
-            'botstrap-saas',
-            'popper-js',
-            'laravel-mix',
-            'jquery'
-        ]));
+        if ($configKey === 'devDependencies') {
+            return array_merge([
+                'laravel-mix' => '^5.0.1',
+                'laravel-mix-purgecss' => '^4.1',
+                'laravel-mix-tailwind' => '^0.1.0',
+                'tailwindcss' => '^1.0',
+                '@tailwindcss/custom-forms' => '^0.2'
+            ], Arr::except($packages, [
+                'bootstrap',
+                'botstrap-saas',
+                'popper-js',
+                'laravel-mix',
+                'jquery',
+                'vue',
+                'vue-template-compiler'
+            ]));
+        } else {
+            return array_merge([
+                'alpinejs' => '^2.3.1'
+            ], $packages);
+        }
     }
 
     protected static function updateStyles()
