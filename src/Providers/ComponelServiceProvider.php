@@ -8,6 +8,7 @@ use Muhsenmaqsudi\Componel\Commands\UiCommand;
 use Muhsenmaqsudi\Componel\View\Components\Alert;
 use Muhsenmaqsudi\Componel\View\Components\Badge;
 use Muhsenmaqsudi\Componel\View\Components\Button;
+use Muhsenmaqsudi\Componel\View\Components\Checkbox;
 use Muhsenmaqsudi\Componel\View\Components\File;
 use Muhsenmaqsudi\Componel\View\Components\Input;
 use Muhsenmaqsudi\Componel\View\Components\Textarea;
@@ -31,7 +32,8 @@ class ComponelServiceProvider extends ServiceProvider
             Button::class,
             Input::class,
             File::class,
-            Textarea::class
+            Textarea::class,
+            Checkbox::class
         ]);
 
         Paginator::defaultView('pagination::default');
