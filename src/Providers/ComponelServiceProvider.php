@@ -8,6 +8,7 @@ use Muhsenmaqsudi\Componel\Commands\UiCommand;
 use Muhsenmaqsudi\Componel\View\Components\Alert;
 use Muhsenmaqsudi\Componel\View\Components\Badge;
 use Muhsenmaqsudi\Componel\View\Components\Button;
+use Muhsenmaqsudi\Componel\View\Components\File;
 use Muhsenmaqsudi\Componel\View\Components\Input;
 
 class ComponelServiceProvider extends ServiceProvider
@@ -27,7 +28,8 @@ class ComponelServiceProvider extends ServiceProvider
             Alert::class,
             Badge::class,
             Button::class,
-            Input::class
+            Input::class,
+            File::class
         ]);
 
         Paginator::defaultView('pagination::default');
