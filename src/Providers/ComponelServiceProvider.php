@@ -10,6 +10,7 @@ use Muhsenmaqsudi\Componel\View\Components\Badge;
 use Muhsenmaqsudi\Componel\View\Components\Button;
 use Muhsenmaqsudi\Componel\View\Components\File;
 use Muhsenmaqsudi\Componel\View\Components\Input;
+use Muhsenmaqsudi\Componel\View\Components\Textarea;
 
 class ComponelServiceProvider extends ServiceProvider
 {
@@ -29,7 +30,8 @@ class ComponelServiceProvider extends ServiceProvider
             Badge::class,
             Button::class,
             Input::class,
-            File::class
+            File::class,
+            Textarea::class
         ]);
 
         Paginator::defaultView('pagination::default');
