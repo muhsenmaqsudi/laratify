@@ -1,6 +1,6 @@
 {
     "name": "muhsenmaqsudi/laravel-componel",
-    "description": "Laravel 7 Component base panel UI package with automatic Crud app Scaffolding & generator",
+    "description": "a Laravel 7 Component Base UI Panel Package using TailwindCSS & AlpineJS",
     "license": "MIT",
     "authors": [
         {
