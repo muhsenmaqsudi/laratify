@@ -3,24 +3,12 @@
 namespace Muhsenmaqsudi\Componel\View\Components;
 
 use Illuminate\View\Component;
+use Muhsenmaqsudi\Componel\Traits\HasInputAttributes;
 
 class File extends Component
 {
-    /**
-     * @var string
-     */
-    public $name;
-    /**
-     * @var string
-     */
-    public $id;
-    /**
-     * @var string
-     */
-    public $label;
-    /**
-     * @var string
-     */
+    use HasInputAttributes;
+
     public $variant;
 
     /**
@@ -31,7 +19,7 @@ class File extends Component
      * @param string $id
      * @param string $label
      */
-    public function __construct(string $name, string $variant = 'blue-500', ?string $id = null, string $label = 'Select a file')
+    public function __construct($name, $variant = 'blue-500', $id = null, $label = 'Select a file')
     {
         $this->name = $name;
         $this->variant = "bg-{$variant}";

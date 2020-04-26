@@ -3,33 +3,14 @@
 namespace Muhsenmaqsudi\Componel\View\Components;
 
 use Illuminate\View\Component;
+use Muhsenmaqsudi\Componel\Traits\HasInputAttributes;
 
 class Textarea extends Component
 {
-    /**
-     * @var string
-     */
-    public $name;
-    /**
-     * @var string
-     */
-    public $id;
-    /**
-     * @var string
-     */
+    use HasInputAttributes;
+
     public $placeholder;
-    /**
-     * @var int
-     */
     public $rows;
-    /**
-     * @var string
-     */
-    public $label;
-    /**
-     * @var string|null
-     */
-    public $value;
 
     /**
      * Create a new component instance.
@@ -40,7 +21,7 @@ class Textarea extends Component
      * @param int $rows
      * @param string|null $value
      */
-    public function __construct(string $name, string $label, ?string $id = null, ?string $placeholder = null, int $rows = 3, ?string $value = null)
+    public function __construct($name, $label, $id = null, $placeholder = null, $rows = 3, $value = null)
     {
         $this->name = $name;
         $this->id = $id;

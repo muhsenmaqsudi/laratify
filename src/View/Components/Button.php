@@ -35,7 +35,7 @@ class Button extends Component
      * @param bool $pill
      * @param bool $outline
      */
-    public function __construct(string $variant = 'blue-500', string $size = 'text-xs', bool $pill = false, bool $outline = false)
+    public function __construct($variant = 'blue-500', $size = 'text-xs', $pill = false, $outline = false)
     {
         $this->variant = $variant;
         $this->outline = $outline;

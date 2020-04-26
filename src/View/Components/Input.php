@@ -4,45 +4,14 @@ namespace Muhsenmaqsudi\Componel\View\Components;
 
 use Illuminate\Support\Str;
 use Illuminate\View\Component;
+use Muhsenmaqsudi\Componel\Traits\HasInputAttributes;
 
 class Input extends Component
 {
-    /**
-     * @var string
-     */
-    public $name;
-    /**
-     * @var string
-     */
-    public $type;
-    /**
-     * @var string
-     */
-    public $label;
-    /**
-     * @var string
-     */
-    public $id;
-    /**
-     * @var string
-     */
-    public $value;
-    /**
-     * @var string
-     */
-    public $placeholder;
+    use HasInputAttributes;
 
-    /**
-     * @var string
-     */
-    public $hint;
-    /**
-     * @var bool
-     */
-    public $disabled;
-    /**
-     * @var bool
-     */
+    public $type;
+    public $placeholder;
     public $readonly;
 
     /**
