@@ -11,6 +11,7 @@ use Muhsenmaqsudi\Componel\View\Components\Button;
 use Muhsenmaqsudi\Componel\View\Components\Checkbox;
 use Muhsenmaqsudi\Componel\View\Components\File;
 use Muhsenmaqsudi\Componel\View\Components\Input;
+use Muhsenmaqsudi\Componel\View\Components\Radios;
 use Muhsenmaqsudi\Componel\View\Components\Select;
 use Muhsenmaqsudi\Componel\View\Components\Textarea;
 
@@ -35,7 +36,8 @@ class ComponelServiceProvider extends ServiceProvider
             File::class,
             Textarea::class,
             Checkbox::class,
-            Select::class
+            Select::class,
+            Radios::class
         ]);
 
         Paginator::defaultView('pagination::default');
