@@ -10,7 +10,7 @@ class Select extends Component
 {
     use HasInputAttributes, OptionFormatter;
     public $options;
-    public $first;
+    public $firstOption;
 
     /**
      * Create a new component instance.
@@ -20,17 +20,17 @@ class Select extends Component
      * @param array $options
      * @param null $id
      * @param bool $disabled
-     * @param bool $first
+     * @param bool $firstOption
      * @param string $value
      */
-    public function __construct($name, $label, array $options, $id = null, $disabled = false, $first = false, $value = null)
+    public function __construct($name, $label, array $options, $id = null, $disabled = false, $firstOption = false, $value = null)
     {
         $this->name = $name;
         $this->label = $label;
         $this->options = $this->formatOptions($options);
         $this->id = $id;
         $this->disabled = $disabled;
-        $this->first = $first;
+        $this->firstOption = $firstOption;
         $this->value = $value;
     }
 
