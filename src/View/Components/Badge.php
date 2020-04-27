@@ -17,20 +17,20 @@ class Badge extends Component
     /**
      * @var bool
      */
-    public $pill;
+    public $rounded;
 
     /**
      * Create a new component instance.
      *
      * @param string $textColor
      * @param string $bgColor
-     * @param bool $pill
+     * @param bool $rounded
      */
-    public function __construct(string $textColor = 'white', string $bgColor = 'blue-500', bool $pill = false)
+    public function __construct(string $textColor = 'white', string $bgColor = 'blue-500', bool $rounded = false)
     {
         $this->textColor = 'text-' . $textColor;
         $this->bgColor = 'bg-' . $bgColor;
-        $this->pill = $pill === true ? 'rounded-full' : 'rounded';
+        $this->rounded = $rounded === true ? 'rounded-full' : 'rounded';
     }
 
     /**

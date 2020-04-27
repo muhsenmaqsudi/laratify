@@ -25,22 +25,22 @@ class Button extends Component
     /**
      * @var bool
      */
-    private $pill;
+    private $rounded;
 
     /**
      * Create a new component instance.
      *
      * @param string $variant
      * @param string $size
-     * @param bool $pill
+     * @param bool $rounded
      * @param bool $outline
      */
-    public function __construct($variant = 'blue-500', $size = 'text-xs', $pill = false, $outline = false)
+    public function __construct($variant = 'blue-500', $size = 'text-xs', $rounded = false, $outline = false)
     {
         $this->variant = $variant;
         $this->outline = $outline;
         $this->size = $size;
-        $this->pill = $pill;
+        $this->rounded = $rounded;
 
         $this->mainClasses = $this->getMainClasses();
     }
@@ -131,7 +131,7 @@ class Button extends Component
     private function getBordersClasses()
     {
         $border = $this->outline === true ? "border border-solid border-{$this->variant}" : null;
-        $rounded = $this->pill === true ? 'rounded-full' : 'rounded';
+        $rounded = $this->rounded === true ? 'rounded-full' : 'rounded';
         return "{$border} {$rounded}";
     }
 }
