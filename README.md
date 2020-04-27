@@ -154,6 +154,20 @@ Radios:
 -   :options="['option1', 'option2', 'option3']" => options with sequential array
 -   :options="[1 => 'option1', 2 => 'option2']" => options with associate array
 
+## Package Config
+
+For publishing package's config file run the bellow command
+
+    php artisan vendor:publish --tag="componel-config"
+    
+```php
+    // componel/config.php
+    return [
+        'text-base-color' => 'white', // changing the app text base color
+        'background-base-color' => 'blue-500' // changing the app background base color
+    ];  
+```
+
 ## Packages Used
 
 Composer packages:
