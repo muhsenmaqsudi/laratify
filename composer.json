@@ -12,7 +12,8 @@
     "require": {
         "php": "^7.3",
         "ext-json": "*",
-        "laravel/framework": "^7.0"
+        "laravel/framework": "^7.0",
+        "laravel/ui": "^2.0"
     },
     "require-dev": {
         "orchestra/testbench": "^5.1"
@@ -27,12 +28,13 @@
             "Muhsenmaqsudi\\Componel\\Tests\\": "tests/"
         }
     },
-    "minimum-stability": "dev",
     "extra": {
         "laravel": {
             "providers": [
                 "Muhsenmaqsudi\\Componel\\Providers\\ComponelServiceProvider"
             ]
         }
-    }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
 }

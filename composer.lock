@@ -1,10 +1,10 @@
 {
     "_readme": [
         "This file locks the dependencies of your project to a known state",
-        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "c0164e07ebbfdefeeb8a9927d37c0110",
+    "content-hash": "11f7fc4b7351c151a1d9f198a5990436",
     "packages": [
         {
             "name": "brick/math",
@@ -295,16 +295,16 @@
         },
         {
             "name": "laravel/framework",
-            "version": "v7.6.2",
+            "version": "v7.8.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/framework.git",
-                "reference": "695be25d84b5cedd0026c428d4e9697fe8cd06f9"
+                "reference": "cdc6d7e6c744f4d8f7d61102aea9b111550cd297"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/framework/zipball/695be25d84b5cedd0026c428d4e9697fe8cd06f9",
-                "reference": "695be25d84b5cedd0026c428d4e9697fe8cd06f9",
+                "url": "https://api.github.com/repos/laravel/framework/zipball/cdc6d7e6c744f4d8f7d61102aea9b111550cd297",
+                "reference": "cdc6d7e6c744f4d8f7d61102aea9b111550cd297",
                 "shasum": ""
             },
             "require": {
@@ -408,6 +408,7 @@
                 "psr/http-message": "Required to allow Storage::put to accept a StreamInterface (^1.0).",
                 "pusher/pusher-php-server": "Required to use the Pusher broadcast driver (^4.0).",
                 "symfony/cache": "Required to PSR-6 cache bridge (^5.0).",
+                "symfony/filesystem": "Required to create relative storage directory symbolic links (^5.0).",
                 "symfony/psr-http-message-bridge": "Required to use PSR-7 bridging features (^2.0).",
                 "wildbit/swiftmailer-postmark": "Required to use Postmark mail driver (^3.0)."
             },
@@ -442,20 +443,75 @@
                 "framework",
                 "laravel"
             ],
-            "time": "2020-04-15T20:57:47+00:00"
+            "time": "2020-04-24T17:21:56+00:00"
         },
         {
-            "name": "league/commonmark",
-            "version": "1.4.0",
+            "name": "laravel/ui",
+            "version": "v2.0.1",
             "source": {
                 "type": "git",
-                "url": "https://github.com/thephpleague/commonmark.git",
-                "reference": "517cbe1c6faf90afeb38a0e917c73acc6d3051ce"
+                "url": "https://github.com/laravel/ui.git",
+                "reference": "47a0a1dac76f5e73803c86e1f38b2c7e0ae7fa83"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/thephpleague/commonmark/zipball/517cbe1c6faf90afeb38a0e917c73acc6d3051ce",
-                "reference": "517cbe1c6faf90afeb38a0e917c73acc6d3051ce",
+                "url": "https://api.github.com/repos/laravel/ui/zipball/47a0a1dac76f5e73803c86e1f38b2c7e0ae7fa83",
+                "reference": "47a0a1dac76f5e73803c86e1f38b2c7e0ae7fa83",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/console": "^7.0",
+                "illuminate/filesystem": "^7.0",
+                "illuminate/support": "^7.0",
+                "php": "^7.2.5"
+            },
+            "require-dev": {
+                "mockery/mockery": "^1.0",
+                "phpunit/phpunit": "^8.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Laravel\\Ui\\UiServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Laravel\\Ui\\": "src/",
+                    "Illuminate\\Foundation\\Auth\\": "auth-backend/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Taylor Otwell",
+                    "email": "taylor@laravel.com"
+                }
+            ],
+            "description": "Laravel UI utilities and presets.",
+            "keywords": [
+                "laravel",
+                "ui"
+            ],
+            "time": "2020-03-03T20:16:46+00:00"
+        },
+        {
+            "name": "league/commonmark",
+            "version": "1.4.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/thephpleague/commonmark.git",
+                "reference": "9e780d972185e4f737a03bade0fd34a9e67bbf31"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/thephpleague/commonmark/zipball/9e780d972185e4f737a03bade0fd34a9e67bbf31",
+                "reference": "9e780d972185e4f737a03bade0fd34a9e67bbf31",
                 "shasum": ""
             },
             "require": {
@@ -516,7 +572,7 @@
                 "md",
                 "parser"
             ],
-            "time": "2020-04-18T20:46:13+00:00"
+            "time": "2020-04-24T13:39:56+00:00"
         },
         {
             "name": "league/flysystem",
@@ -3232,23 +3288,20 @@
         },
         {
             "name": "phpdocumentor/reflection-common",
-            "version": "2.0.0",
+            "version": "2.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpDocumentor/ReflectionCommon.git",
-                "reference": "63a995caa1ca9e5590304cd845c15ad6d482a62a"
+                "reference": "6568f4687e5b41b054365f9ae03fcb1ed5f2069b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpDocumentor/ReflectionCommon/zipball/63a995caa1ca9e5590304cd845c15ad6d482a62a",
-                "reference": "63a995caa1ca9e5590304cd845c15ad6d482a62a",
+                "url": "https://api.github.com/repos/phpDocumentor/ReflectionCommon/zipball/6568f4687e5b41b054365f9ae03fcb1ed5f2069b",
+                "reference": "6568f4687e5b41b054365f9ae03fcb1ed5f2069b",
                 "shasum": ""
             },
             "require": {
                 "php": ">=7.1"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "~6"
             },
             "type": "library",
             "extra": {
@@ -3280,7 +3333,7 @@
                 "reflection",
                 "static analysis"
             ],
-            "time": "2018-08-07T13:53:10+00:00"
+            "time": "2020-04-27T09:25:28+00:00"
         },
         {
             "name": "phpdocumentor/reflection-docblock",
@@ -3659,16 +3712,16 @@
         },
         {
             "name": "phpunit/php-timer",
-            "version": "3.1.2",
+            "version": "3.1.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/php-timer.git",
-                "reference": "35e732ff964693cb91ef4690f1f6016833b68f9d"
+                "reference": "dc9368fae6ef2ffa57eba80a7410bcef81df6258"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/php-timer/zipball/35e732ff964693cb91ef4690f1f6016833b68f9d",
-                "reference": "35e732ff964693cb91ef4690f1f6016833b68f9d",
+                "url": "https://api.github.com/repos/sebastianbergmann/php-timer/zipball/dc9368fae6ef2ffa57eba80a7410bcef81df6258",
+                "reference": "dc9368fae6ef2ffa57eba80a7410bcef81df6258",
                 "shasum": ""
             },
             "require": {
@@ -3704,7 +3757,7 @@
             "keywords": [
                 "timer"
             ],
-            "time": "2020-04-17T15:08:36+00:00"
+            "time": "2020-04-20T06:00:37+00:00"
         },
         {
             "name": "phpunit/php-token-stream",
@@ -3757,16 +3810,16 @@
         },
         {
             "name": "phpunit/phpunit",
-            "version": "9.1.1",
+            "version": "9.1.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit.git",
-                "reference": "848f6521c906500e66229668768576d35de0227e"
+                "reference": "a74780472172957a65cb5999a597e8c0878cf39c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/848f6521c906500e66229668768576d35de0227e",
-                "reference": "848f6521c906500e66229668768576d35de0227e",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/a74780472172957a65cb5999a597e8c0878cf39c",
+                "reference": "a74780472172957a65cb5999a597e8c0878cf39c",
                 "shasum": ""
             },
             "require": {
@@ -3786,7 +3839,7 @@
                 "phpunit/php-file-iterator": "^3.0",
                 "phpunit/php-invoker": "^3.0",
                 "phpunit/php-text-template": "^2.0",
-                "phpunit/php-timer": "^3.0",
+                "phpunit/php-timer": "^3.1.4",
                 "sebastian/code-unit": "^1.0",
                 "sebastian/comparator": "^4.0",
                 "sebastian/diff": "^4.0",
@@ -3799,7 +3852,8 @@
                 "sebastian/version": "^3.0"
             },
             "require-dev": {
-                "ext-pdo": "*"
+                "ext-pdo": "*",
+                "phpspec/prophecy-phpunit": "^2.0"
             },
             "suggest": {
                 "ext-soap": "*",
@@ -3840,20 +3894,20 @@
                 "testing",
                 "xunit"
             ],
-            "time": "2020-04-03T14:40:04+00:00"
+            "time": "2020-04-23T04:42:05+00:00"
         },
         {
             "name": "sebastian/code-unit",
-            "version": "1.0.0",
+            "version": "1.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/code-unit.git",
-                "reference": "8d8f09bd47c75159921e6e84fdef146343962866"
+                "reference": "00d2094a93573796ec6666401be467fa6efcd86a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/code-unit/zipball/8d8f09bd47c75159921e6e84fdef146343962866",
-                "reference": "8d8f09bd47c75159921e6e84fdef146343962866",
+                "url": "https://api.github.com/repos/sebastianbergmann/code-unit/zipball/00d2094a93573796ec6666401be467fa6efcd86a",
+                "reference": "00d2094a93573796ec6666401be467fa6efcd86a",
                 "shasum": ""
             },
             "require": {
@@ -3886,7 +3940,7 @@
             ],
             "description": "Collection of value objects that represent the PHP code units",
             "homepage": "https://github.com/sebastianbergmann/code-unit",
-            "time": "2020-03-30T11:59:20+00:00"
+            "time": "2020-04-27T06:25:01+00:00"
         },
         {
             "name": "sebastian/code-unit-reverse-lookup",
@@ -4598,9 +4652,10 @@
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": [],
-    "prefer-stable": false,
+    "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
+        "php": "^7.3",
         "ext-json": "*"
     },
     "platform-dev": []
