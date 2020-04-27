@@ -35,9 +35,9 @@ class Button extends Component
      * @param bool $rounded
      * @param bool $outline
      */
-    public function __construct($variant = 'blue-500', $size = 'text-xs', $rounded = false, $outline = false)
+    public function __construct($variant = null, $size = 'text-xs', $rounded = false, $outline = false)
     {
-        $this->variant = $variant;
+        $this->variant = $variant ? $variant : config('componel.background-base-color');
         $this->outline = $outline;
         $this->size = $size;
         $this->rounded = $rounded;

@@ -6,13 +6,7 @@ use Illuminate\View\Component;
 
 class Alert extends Component
 {
-    /**
-     * @var string
-     */
     public $textColor;
-    /**
-     * @var string
-     */
     public $bgColor;
 
     /**
@@ -21,10 +15,10 @@ class Alert extends Component
      * @param $textColor
      * @param $bgColor
      */
-    public function __construct(string $textColor = 'white', string $bgColor = 'blue-500')
+    public function __construct($textColor = null, $bgColor = null)
     {
-        $this->textColor = 'text-' . $textColor;
-        $this->bgColor = 'bg-' . $bgColor;
+        $this->textColor = $textColor ? 'text-' . $textColor : 'text-' . config('componel.text-base-color');
+        $this->bgColor = $bgColor ? 'bg-' . $bgColor : 'bg-' . config('componel.background-base-color');
     }
 
     /**

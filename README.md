@@ -14,6 +14,12 @@ Require LaravelComponel:
 
     composer require muhsenmaqsudi/laravel-componel
 
+Publishing Vendor Assets
+
+    php artisan vendor:publish --tag="componel-config"
+    php artisan vendor:publish --tag="componel-views"
+
+
 Add TailwindCSS & AlpineJS UI Preset Scaffolding
 
     php artisan componel:ui

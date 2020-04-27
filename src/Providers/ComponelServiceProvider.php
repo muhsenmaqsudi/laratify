@@ -28,6 +28,10 @@ class ComponelServiceProvider extends ServiceProvider
         $this->loadViewsFrom(__DIR__ . '/../../resources/views', 'componel');
         $this->publishes([__DIR__ . '/../../resources/views' => resource_path('views/vendor/componel')], 'componel-views');
 
+        $this->publishes([
+            __DIR__.'/../../config/componel.php' => config_path('componel.php')
+        ], 'componel-config');
+
         $this->loadViewComponentsAs('componel', [
             Alert::class,
             Badge::class,

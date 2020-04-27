@@ -6,17 +6,8 @@ use Illuminate\View\Component;
 
 class Badge extends Component
 {
-    /**
-     * @var string
-     */
     public $textColor;
-    /**
-     * @var string
-     */
     public $bgColor;
-    /**
-     * @var bool
-     */
     public $rounded;
 
     /**
@@ -26,10 +17,10 @@ class Badge extends Component
      * @param string $bgColor
      * @param bool $rounded
      */
-    public function __construct(string $textColor = 'white', string $bgColor = 'blue-500', bool $rounded = false)
+    public function __construct(string $textColor = null, string $bgColor = null, bool $rounded = false)
     {
-        $this->textColor = 'text-' . $textColor;
-        $this->bgColor = 'bg-' . $bgColor;
+        $this->textColor = $textColor ? 'text-' . $textColor : 'text-' . config('componel.text-base-color');
+        $this->bgColor = $bgColor ? 'bg-' . $bgColor : 'bg-' . config('componel.background-base-color');
         $this->rounded = $rounded === true ? 'rounded-full' : 'rounded';
     }
 
