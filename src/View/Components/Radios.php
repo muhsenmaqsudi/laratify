@@ -10,9 +10,7 @@ use Muhsenmaqsudi\Componel\Traits\OptionFormatter;
 class Radios extends Component
 {
     use HasInputAttributes, OptionFormatter;
-    /**
-     * @var array
-     */
+
     public $options;
 
     /**

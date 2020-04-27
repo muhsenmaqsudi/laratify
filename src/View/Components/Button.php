@@ -6,25 +6,10 @@ use Illuminate\View\Component;
 
 class Button extends Component
 {
-    /**
-     * @var string
-     */
     public $mainClasses;
-    /**
-     * @var string
-     */
     private $variant;
-    /**
-     * @var bool
-     */
     private $outline;
-    /**
-     * @var string
-     */
     private $size;
-    /**
-     * @var bool
-     */
     private $rounded;
 
     /**
@@ -57,7 +42,7 @@ class Button extends Component
 
     private function getMainClasses()
     {
-        return "{$this->getBackgroundsClasses()} {$this->getTypographyClasses()} {$this->getBordersClasses()} {$this->getInteractivityClasses()} 
+        return "{$this->getBackgroundsClasses()} {$this->getTypographyClasses()} {$this->getBordersClasses()} {$this->getInteractivityClasses()}
         {$this->getSpacingClasses()} {$this->getTransitionsClasses()} {$this->getPseudoVariantClasses()}";
     }
 

@@ -9,6 +9,7 @@ use Muhsenmaqsudi\Componel\Traits\OptionFormatter;
 class Select extends Component
 {
     use HasInputAttributes, OptionFormatter;
+
     public $options;
     public $firstOption;
 
