@@ -30,12 +30,11 @@ With Authentication Scaffolding
 
 Installing TailwindCSS & AlpineJS and compiling them
 
-    npm install
-    npm run dev
+    npm install && npm run dev
 
 ## Laravel Componel Components
 
-Laravel Compnel offers useful components to make building your app ui fast & easy. See below examples of each component.
+Laravel Componel offers useful components to make building your app ui fast & easy. See below examples of each component.
 
 Available Colors:
 
@@ -47,90 +46,110 @@ All the colors except Black & White comes with a 100 to 900 color shades that yo
 
 Alert:
 
-    <x-componel-alert text-color="red-500"
-                      bg-color="yellow-500">
+```blade
+    <x-componel-alert text-color="black"
+                      bg-color="green-500">
         Your alert message goes here
     </x-componel-alert>
+```
 
 Badge:
 
-    <x-componel-badge text-color="gray-800"
-                      bg-color="blue-400"
+```blade
+    <x-componel-badge text-color="gray-700"
+                      bg-color="teal-200"
                       rounded>
         Your text goes here
     </x-componel-badge>
+```
 
 Button:
 
+```blade
     <x-componel-button variant="pink-500"
                        size="lg"
                        outline
                        rounded>
         Button Title
     </x-componel-button>
+```
 
-**Note: available sizes: ['sm', 'md', 'lg']**
+- Note: available sizes: 'sm', 'md', 'lg'
 
 Input:
 
+```blade
     <x-componel-input name="email"
                       type="email"
                       label="Email:"
                       id="email_id"
                       placeholder="Enter your email"
-                      :value="old('email', $data->email ?? '')"
-                      disabled
-                      readonly>
+                      :value="old('email', $data->email ?? '')">
     </x-componel-input>
+```
+
+- for disabling the input set `disabled` attributes, for readonly input set `readonly` attribute**
+```blade
+    <x-componel-input disabled readonly></x-componel-input>
+```
 
 Checkbox:
 
+```blade
     <x-componel-checkbox name="terms"
                          label="accept terms & conditions"
                          checkbox-label="accept"
                          id="terms_id"
-                         :value="old('terms', $data->terms ?? '')"
-                         disabled>
+                         :value="old('terms', $data->terms ?? '')">
     </x-componel-checkbox>
+```
 
-**Note: checkbox attributes should have `boolean` migration columns.**
+- for disabling the checkbox set `disabled` attributes \
+- checkbox attributes should have `boolean` migration columns.
 
 Select:
 
+```blade
     <x-componel-select name="option"
-                        label="Option Label:"
-                        first-option="Select your option"
-                        :options="[1 => 'option1', 2 => 'option2']"
-                        :value="old('option', $data->option ?? '')"
-    >
+                       label="Option Label:"
+                       first-option="Select your option"
+                       :options="[1 => 'option1', 2 => 'option2']"
+                       :value="old('option', $data->option ?? '')">
     </x-componel-select>
+```
 
--   Note: if the options are an associative array, the keys are used as the labels and the values as the values. For sequential arrays, the values are used for both the labels and values.
+-   if the options are an associative array, the keys are used as the labels and the values as the values. For sequential arrays, the values are used for both the labels and values.
 -   :options="['option1', 'option2', 'option3']" => options with sequential array
 -   :options="[1 => 'option1', 2 => 'option2']" => options with associate array
 
 File:
 
+```blade
     <x-componel-file name="avatar"
                      id="upload"
                      label="Upload your avatar"
-                     variant="teal-500">
+                     variant="indigo-500">
     </x-componel-file>
+```
 
 Textarea:
 
+```blade
     <x-componel-textarea name="body"
                          label="Text Body:"
                          placeholder="Your text body goes here"
                          :value="old('body', $data->body ?? '')">
     </x-componel-textarea>
+```
 
 Radios:
 
+```blade
     <x-componel-radios name="option"
                        :options="['option1', 'option2', 'option3']"
                        :value="old('option', $data->option ?? ''">
     </x-componel-radios>
+```
 
 -   :options="['option1', 'option2', 'option3']" => options with sequential array
 -   :options="[1 => 'option1', 2 => 'option2']" => options with associate array

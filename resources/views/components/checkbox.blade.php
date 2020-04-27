@@ -1,6 +1,6 @@
 <div class="flex flex-col">
     @if($label)
-        <label class="my-2">{{ $label }}</label>
+        <label class="inline-flex my-2">{{ $label }}</label>
     @endif
     <label class="inline-flex items-center">
         <input type="hidden" name="{{ $name }}" value="0">

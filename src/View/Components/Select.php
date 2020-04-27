@@ -17,14 +17,14 @@ class Select extends Component
      * Create a new component instance.
      *
      * @param $name
-     * @param $label
+     * @param null $label
      * @param array $options
      * @param null $id
      * @param bool $disabled
      * @param bool $firstOption
      * @param string $value
      */
-    public function __construct($name, $label, array $options, $id = null, $disabled = false, $firstOption = false, $value = null)
+    public function __construct($name, array $options, $label = null,  $id = null, $disabled = false, $firstOption = false, $value = null)
     {
         $this->name = $name;
         $this->label = $label;
