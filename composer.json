@@ -10,7 +10,7 @@
         }
     ],
     "require": {
-        "php": "^7.3",
+        "php": "^7.2.5",
         "ext-json": "*",
         "laravel/framework": "^7.0",
         "laravel/ui": "^2.0"
@@ -20,7 +20,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Muhsenmaqsudi\\Componel\\" : "src/"
+            "Muhsenmaqsudi\\Componel\\": "src/"
         }
     },
     "autoload-dev": {
