@@ -9,6 +9,7 @@ use Muhsenmaqsudi\Componel\View\Components\Alert;
 use Muhsenmaqsudi\Componel\View\Components\Badge;
 use Muhsenmaqsudi\Componel\View\Components\Button;
 use Muhsenmaqsudi\Componel\View\Components\Checkbox;
+use Muhsenmaqsudi\Componel\View\Components\Dropdown;
 use Muhsenmaqsudi\Componel\View\Components\File;
 use Muhsenmaqsudi\Componel\View\Components\Input;
 use Muhsenmaqsudi\Componel\View\Components\Radios;
@@ -41,7 +42,8 @@ class ComponelServiceProvider extends ServiceProvider
             Textarea::class,
             Checkbox::class,
             Select::class,
-            Radios::class
+            Radios::class,
+            Dropdown::class
         ]);
 
         Paginator::defaultView('pagination::default');
