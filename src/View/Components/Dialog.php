@@ -15,19 +15,21 @@ class Dialog extends Component
     public $okTitle;
     public $closeTitle;
     public $noClose;
+    public $transition;
 
     /**
      * Create a new component instance.
      *
-     * @param $title
+     * @param string $title
      * @param string $size
      * @param bool $persistent
      * @param bool $scrollable
+     * @param bool $transition
      * @param string $okTitle
      * @param string $closeTitle
-     * @param $noClose
+     * @param bool $noClose
      */
-    public function __construct($title = 'My Modal', $size = 'sm', $persistent = false, $scrollable = false, $okTitle = 'Ok', $closeTitle = 'Close', $noClose = false)
+    public function __construct($title = 'My Modal', $size = 'sm', $persistent = false, $scrollable = false, $transition = true, $okTitle = 'Ok', $closeTitle = 'Close', $noClose = false)
     {
         $this->title = $title;
         $this->persistent = $persistent;
@@ -36,6 +38,7 @@ class Dialog extends Component
         $this->okTitle = $okTitle;
         $this->closeTitle = $closeTitle;
         $this->noClose = $noClose;
+        $this->transition = $transition;
     }
 
     private function checkDialogSize($size)
