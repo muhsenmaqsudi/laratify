@@ -1,6 +1,10 @@
 <button class="{{ $mainClasses }}"
         type="button"
         @foreach($events as $eventModifier => $eventHandler)
-            {{ "@{$eventModifier}={$eventHandler}" }}
+            @if(strpos($eventModifier, 'on') !== false)
+                {{ "{$eventModifier}={$eventHandler}" }}
+            @else
+                {{ "@{$eventModifier}={$eventHandler}" }}
+            @endif
         @endforeach
 >{{ $slot }}</button>
