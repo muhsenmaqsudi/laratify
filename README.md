@@ -172,28 +172,43 @@ Dropdown:
 Dialog:
 
 ```blade
-        <x-componel-dialog size="lg" scrollable no-transition no-header no-footer no-close close-title="Cancel" ok-title="Submit">
-            <x-slot name="activator">
-                <x-componel-button :events="['click' => 'toggleDialog()']" variant="red-500" outline>Open Dialog</x-componel-button>
-            </x-slot>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad architecto aut enim eos error eveniet explicabo
-            ipsa ipsam laudantium minima nisi obcaecati omnis quam qui reprehenderit sapiente sunt, tenetur veniam.
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet blanditiis deserunt, dolore harum maxime nam
-            nulla quasi voluptate? Adipisci error illum laudantium magnam praesentium quibusdam sit ut. Dolor, dolore,
-            rem.
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi aperiam, autem corporis deserunt dolores ea
-            eligendi et impedit magni mollitia natus necessitatibus odio quae recusandae reiciendis sunt suscipit vel
-            voluptas?
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium alias, aspernatur atque aut
-            consequuntur cumque deleniti distinctio dolorum et facere fugit iusto labore maxime nemo quam quas
-            repellendus, reprehenderit voluptatibus!
+    <x-componel-dialog size="lg" scrollable no-transition no-header no-footer no-close close-title="Cancel" ok-title="Submit">
+        <x-slot name="activator">
+            <x-componel-button :events="['click' => 'toggleDialog()']" variant="red-500" outline>Open Dialog</x-componel-button>
+        </x-slot>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad architecto aut enim eos error eveniet explicabo
+        ipsa ipsam laudantium minima nisi obcaecati omnis quam qui reprehenderit sapiente sunt, tenetur veniam.
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet blanditiis deserunt, dolore harum maxime nam
+        nulla quasi voluptate? Adipisci error illum laudantium magnam praesentium quibusdam sit ut. Dolor, dolore,
+        rem.
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi aperiam, autem corporis deserunt dolores ea
+        eligendi et impedit magni mollitia natus necessitatibus odio quae recusandae reiciendis sunt suscipit vel
+        voluptas?
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium alias, aspernatur atque aut
+        consequuntur cumque deleniti distinctio dolorum et facere fugit iusto labore maxime nemo quam quas
+        repellendus, reprehenderit voluptatibus!
 
-            <x-slot name="footer">
-                <x-componel-button :events="['click' => 'toggleDialog()']" variant="green-500" rounded>Save</x-componel-button>
-            </x-slot>
-        </x-componel-dialog>
+        <x-slot name="footer">
+            <x-componel-button :events="['click' => 'toggleDialog()']" variant="green-500" rounded>Save</x-componel-button>
+        </x-slot>
+    </x-componel-dialog>
 ```
 
+Tooltip:
+
+```blade
+    <x-componel-button id="elButton">Element</x-componel-button>
+    <x-componel-button id="idButton">Id</x-componel-button>
+    <x-componel-tooltip content="Tooltip with id" placement="left" append-to="button" no-arrow />
+    <x-componel-tooltip content="Tooltip with element" placement="top-start" append-to="#idButton" />
+```
+
+Available placements:
+ 
+- top, bottom, right, left, 
+- {top,bottom,right,left}-start, {top,bottom,right,left}-end'
+
+Note: **remember to put tooltip after the parent element**
 
 ## Package Config
 
@@ -212,6 +227,7 @@ For publishing package's config file run the bellow command
 ## Packages Used
 
 Composer packages:
+-   [laravel/ui](https://github.com/laravel/ui)
 
 NPM packages:
 
@@ -220,3 +236,4 @@ NPM packages:
 -   [laravel-mix-purgecss](https://www.npmjs.com/package/laravel-mix-purgecss)
 -   [laravel-mix-tailwind](https://www.npmjs.com/package/laravel-mix-tailwind)
 -   [alpinejs](https://www.npmjs.com/package/alpinejs)
+-   [tippyjs](https://github.com/atomiks/tippyjs)
