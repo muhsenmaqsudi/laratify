@@ -69,7 +69,9 @@ Button:
     <x-componel-button variant="pink-500"
                        size="lg"
                        outline
-                       rounded>
+                       rounded
+                       :events="['onclick' => 'alert(\'clicked\')']"
+>
         Button Title
     </x-componel-button>
 ```
@@ -147,12 +149,51 @@ Radios:
 ```blade
     <x-componel-radios name="option"
                        :options="['option1', 'option2', 'option3']"
-                       :value="old('option', $data->option ?? ''">
+                       :value="old('option', $data->option ?? '')">
     </x-componel-radios>
 ```
 
 -   :options="['option1', 'option2', 'option3']" => options with sequential array
 -   :options="[1 => 'option1', 2 => 'option2']" => options with associate array
+
+Dropdown:
+
+```blade
+    <x-componel-dropdown name="My Dropdown" :links="[
+        'URL link' => '/auth/login', '|', 'Google' => 'https://google.com', 'Login' => 'login'
+    ]"
+                         bg-color="teal-500"
+    >
+    </x-componel-dropdown>
+```
+
+- '|' is the separator in the drop down list, so use it when you want to separate links
+
+Dialog:
+
+```blade
+        <x-componel-dialog size="lg" scrollable no-transition no-header no-footer no-close close-title="Cancel" ok-title="Submit">
+            <x-slot name="activator">
+                <x-componel-button :events="['click' => 'toggleDialog()']" variant="red-500" outline>Open Dialog</x-componel-button>
+            </x-slot>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad architecto aut enim eos error eveniet explicabo
+            ipsa ipsam laudantium minima nisi obcaecati omnis quam qui reprehenderit sapiente sunt, tenetur veniam.
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet blanditiis deserunt, dolore harum maxime nam
+            nulla quasi voluptate? Adipisci error illum laudantium magnam praesentium quibusdam sit ut. Dolor, dolore,
+            rem.
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi aperiam, autem corporis deserunt dolores ea
+            eligendi et impedit magni mollitia natus necessitatibus odio quae recusandae reiciendis sunt suscipit vel
+            voluptas?
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium alias, aspernatur atque aut
+            consequuntur cumque deleniti distinctio dolorum et facere fugit iusto labore maxime nemo quam quas
+            repellendus, reprehenderit voluptatibus!
+
+            <x-slot name="footer">
+                <x-componel-button :events="['click' => 'toggleDialog()']" variant="green-500" rounded>Save</x-componel-button>
+            </x-slot>
+        </x-componel-dialog>
+```
+
 
 ## Package Config
 
@@ -161,7 +202,7 @@ For publishing package's config file run the bellow command
     php artisan vendor:publish --tag="componel-config"
     
 ```php
-    // componel/config.php
+    // app/config.php
     return [
         'text-base-color' => 'white', // changing the app text base color
         'background-base-color' => 'blue-500' // changing the app background base color
