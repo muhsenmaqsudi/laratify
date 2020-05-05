@@ -15,6 +15,7 @@ class Button extends Component
     private $size;
     private $rounded;
     public $events;
+    public $id;
 
     /**
      * Create a new component instance.
@@ -24,14 +25,16 @@ class Button extends Component
      * @param string $size
      * @param bool $rounded
      * @param bool $outline
+     * @param null $id
      */
-    public function __construct(array $events = [], $variant = null, $size = 'text-xs', $rounded = false, $outline = false)
+    public function __construct(array $events = [], $variant = null, $size = 'text-xs', $rounded = false, $outline = false, $id = null)
     {
         $this->variant = $variant ? $variant : config('componel.background-base-color');
         $this->outline = $outline;
         $this->size = $size;
         $this->rounded = $rounded;
         $this->events = $events;
+        $this->id = $id;
 
         $this->mainClasses = $this->getMainClasses();
     }
