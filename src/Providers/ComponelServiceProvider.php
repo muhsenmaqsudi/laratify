@@ -16,6 +16,7 @@ use Muhsenmaqsudi\Componel\View\Components\Input;
 use Muhsenmaqsudi\Componel\View\Components\Radios;
 use Muhsenmaqsudi\Componel\View\Components\Select;
 use Muhsenmaqsudi\Componel\View\Components\Textarea;
+use Muhsenmaqsudi\Componel\View\Components\Tooltip;
 
 class ComponelServiceProvider extends ServiceProvider
 {
@@ -45,7 +46,8 @@ class ComponelServiceProvider extends ServiceProvider
             Select::class,
             Radios::class,
             Dropdown::class,
-            Dialog::class
+            Dialog::class,
+            Tooltip::class
         ]);
 
         Paginator::defaultView('pagination::default');

@@ -38,7 +38,6 @@ class TailwindCSS extends Preset
             ], Arr::except($packages, [
                 'bootstrap',
                 'botstrap-saas',
-                'popper-js',
                 'laravel-mix',
                 'jquery',
                 'vue',
@@ -46,7 +45,8 @@ class TailwindCSS extends Preset
             ]));
         } else {
             return array_merge([
-                'alpinejs' => '^2.3.1'
+                'alpinejs' => '^2.3.1',
+                "tippy.js" => "^6.2.3"
             ], $packages);
         }
     }

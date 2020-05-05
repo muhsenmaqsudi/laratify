@@ -60,3 +60,8 @@
  * @import "utilities/background-patterns";
  * @import "utilities/skew-transforms";
  */
+
+/*
+ * Tippy.js custom tooltip styles
+*/
+@import "~tippy.js/dist/tippy.css";
