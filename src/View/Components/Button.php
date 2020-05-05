@@ -14,21 +14,24 @@ class Button extends Component
     private $outline;
     private $size;
     private $rounded;
+    public $events;
 
     /**
      * Create a new component instance.
      *
+     * @param array $events
      * @param string $variant
      * @param string $size
      * @param bool $rounded
      * @param bool $outline
      */
-    public function __construct($variant = null, $size = 'text-xs', $rounded = false, $outline = false)
+    public function __construct(array $events = [], $variant = null, $size = 'text-xs', $rounded = false, $outline = false)
     {
         $this->variant = $variant ? $variant : config('componel.background-base-color');
         $this->outline = $outline;
         $this->size = $size;
         $this->rounded = $rounded;
+        $this->events = $events;
 
         $this->mainClasses = $this->getMainClasses();
     }

@@ -1,1 +1,6 @@
-<button class="{{ $mainClasses }}" type="button">{{ $slot }}</button>
+<button class="{{ $mainClasses }}"
+        type="button"
+        @foreach($events as $eventModifier => $eventHandler)
+            {{ "@{$eventModifier}={$eventHandler}" }}
+        @endforeach
+>{{ $slot }}</button>
