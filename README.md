@@ -210,6 +210,25 @@ Available placements:
 
 Note: **remember to put tooltip after the parent element**
 
+Grids & Grid
+
+```blade
+    <x-componel-grids :cols="['all' => 3, 'sm' => 2]" :rows="['all' => 5, 'md' => 3]" :gaps="['all'=> 2, 'md' => 20]">
+        <x-componel-grid :col-start="['all' => 1, 'md'=>2]" :col-end="['all' => 2, 'sm' => 1]" :row-start="['all' => 2, 'lg' => 4]" :row-end="['all' => 4]">
+            <div class="h-full bg-blue-500">2</div>
+        </x-componel-grid>
+        <x-componel-grid>
+            <div class="h-full bg-red-500">1</div>
+        </x-componel-grid>
+        <x-componel-grid>
+            <div class="h-full bg-black">3</div>
+        </x-componel-grid>
+        <x-componel-grid>
+            <div class="h-full bg-gray-500">4</div>
+        </x-componel-grid>
+    </x-componel-grids>
+```
+
 ## Package Config
 
 For publishing package's config file run the bellow command
