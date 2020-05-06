@@ -12,6 +12,8 @@ use Muhsenmaqsudi\Componel\View\Components\Checkbox;
 use Muhsenmaqsudi\Componel\View\Components\Dialog;
 use Muhsenmaqsudi\Componel\View\Components\Dropdown;
 use Muhsenmaqsudi\Componel\View\Components\File;
+use Muhsenmaqsudi\Componel\View\Components\Grid;
+use Muhsenmaqsudi\Componel\View\Components\Grids;
 use Muhsenmaqsudi\Componel\View\Components\Input;
 use Muhsenmaqsudi\Componel\View\Components\Radios;
 use Muhsenmaqsudi\Componel\View\Components\Select;
@@ -47,7 +49,9 @@ class ComponelServiceProvider extends ServiceProvider
             Radios::class,
             Dropdown::class,
             Dialog::class,
-            Tooltip::class
+            Tooltip::class,
+            Grids::class,
+            Grid::class
         ]);
 
         Paginator::defaultView('pagination::default');
