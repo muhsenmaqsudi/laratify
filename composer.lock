@@ -1,10 +1,10 @@
 {
     "_readme": [
         "This file locks the dependencies of your project to a known state",
-        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "11f7fc4b7351c151a1d9f198a5990436",
+    "content-hash": "ba0969186e1a045188646e18c986244f",
     "packages": [
         {
             "name": "brick/math",
@@ -3070,16 +3070,16 @@
         },
         {
             "name": "orchestra/testbench",
-            "version": "v5.1.0",
+            "version": "v5.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/orchestral/testbench.git",
-                "reference": "e36bdb5fc599495f46a8b2fd3a5e6ffed044e095"
+                "reference": "e2e493e8fdb043cdb4ab97560b4ce53d21313c40"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/orchestral/testbench/zipball/e36bdb5fc599495f46a8b2fd3a5e6ffed044e095",
-                "reference": "e36bdb5fc599495f46a8b2fd3a5e6ffed044e095",
+                "url": "https://api.github.com/repos/orchestral/testbench/zipball/e2e493e8fdb043cdb4ab97560b4ce53d21313c40",
+                "reference": "e2e493e8fdb043cdb4ab97560b4ce53d21313c40",
                 "shasum": ""
             },
             "require": {
@@ -3116,7 +3116,7 @@
                 "orchestral",
                 "testing"
             ],
-            "time": "2020-03-10T17:14:11+00:00"
+            "time": "2020-04-28T01:11:20+00:00"
         },
         {
             "name": "orchestra/testbench-core",
@@ -4655,7 +4655,7 @@
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
-        "php": "^7.3",
+        "php": "^7.2.5",
         "ext-json": "*"
     },
     "platform-dev": []
