@@ -9,6 +9,7 @@ use Muhsenmaqsudi\Componel\View\Components\Alert;
 use Muhsenmaqsudi\Componel\View\Components\Badge;
 use Muhsenmaqsudi\Componel\View\Components\Button;
 use Muhsenmaqsudi\Componel\View\Components\Checkbox;
+use Muhsenmaqsudi\Componel\View\Components\Col;
 use Muhsenmaqsudi\Componel\View\Components\Dialog;
 use Muhsenmaqsudi\Componel\View\Components\Dropdown;
 use Muhsenmaqsudi\Componel\View\Components\File;
@@ -16,6 +17,7 @@ use Muhsenmaqsudi\Componel\View\Components\Grid;
 use Muhsenmaqsudi\Componel\View\Components\Grids;
 use Muhsenmaqsudi\Componel\View\Components\Input;
 use Muhsenmaqsudi\Componel\View\Components\Radios;
+use Muhsenmaqsudi\Componel\View\Components\Row;
 use Muhsenmaqsudi\Componel\View\Components\Select;
 use Muhsenmaqsudi\Componel\View\Components\Textarea;
 use Muhsenmaqsudi\Componel\View\Components\Tooltip;
@@ -51,7 +53,9 @@ class ComponelServiceProvider extends ServiceProvider
             Dialog::class,
             Tooltip::class,
             Grids::class,
-            Grid::class
+            Grid::class,
+            Col::class,
+            Row::class
         ]);
 
         Paginator::defaultView('pagination::default');
