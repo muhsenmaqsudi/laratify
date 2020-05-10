@@ -8,6 +8,28 @@ use Illuminate\Support\Arr;
 
 class TailwindCSS extends Preset
 {
+    const NPM_DEV_PACKAGES_TO_ADD = [
+        'laravel-mix' => '^5.0.1',
+        'laravel-mix-purgecss' => '^4.1',
+        'laravel-mix-tailwind' => '^0.1.0',
+        'tailwindcss' => '^1.0',
+        '@tailwindcss/custom-forms' => '^0.2'
+    ];
+
+    const NPM_PACKAGES_TO_ADD = [
+        'alpinejs' => '^2.3.1',
+        'tippy.js' => '^6.2.3'
+    ];
+
+    const NPM_DEV_PACKAGES_TO_REMOVE = [
+        'bootstrap',
+        'botstrap-saas',
+        'laravel-mix',
+        'jquery',
+        'vue',
+        'vue-template-compiler'
+    ];
+
     public static function install()
     {
         // updating devDependencies packages
@@ -29,25 +51,11 @@ class TailwindCSS extends Preset
     protected static function updatePackageArray(array $packages, $configKey)
     {
         if ($configKey === 'devDependencies') {
-            return array_merge([
-                'laravel-mix' => '^5.0.1',
-                'laravel-mix-purgecss' => '^4.1',
-                'laravel-mix-tailwind' => '^0.1.0',
-                'tailwindcss' => '^1.0',
-                '@tailwindcss/custom-forms' => '^0.2'
-            ], Arr::except($packages, [
-                'bootstrap',
-                'botstrap-saas',
-                'laravel-mix',
-                'jquery',
-                'vue',
-                'vue-template-compiler'
-            ]));
+            return array_merge(
+                static::NPM_DEV_PACKAGES_TO_ADD,
+                Arr::except($packages, static::NPM_DEV_PACKAGES_TO_REMOVE));
         } else {
-            return array_merge([
-                'alpinejs' => '^2.3.1',
-                "tippy.js" => "^6.2.3"
-            ], $packages);
+            return array_merge(self::NPM_PACKAGES_TO_ADD, $packages);
         }
     }
 
