@@ -229,6 +229,41 @@ Grids & Grid
     </x-componel-grids>
 ```
 
+Col & Row
+
+```blade
+    <x-componel-row class="bg-white mt-4 content-between" justify="center" wrap-cols>
+        <x-componel-col cols="6" md="4" xl="4">
+            <div class="text-gray-700 text-center bg-blue-400 p-2">1</div>
+        </x-componel-col>
+        <x-componel-col cols="6" md="4" xl="4">
+            <div class="text-gray-700 text-center bg-red-400 p-2">2</div>
+        </x-componel-col>
+        <x-componel-col cols="6" md="4" xl="4">
+            <div class="text-gray-700 text-center bg-green-400 p-2">3</div>
+        </x-componel-col>
+        <x-componel-col cols="6" md="4" xl="4" order="first">
+            <div class="text-gray-700 text-center bg-green-300 p-2">4</div>
+        </x-componel-col>
+        <x-componel-col cols="6" md="4" xl="4" flex="grow">
+            <div class="text-gray-700 text-center bg-green-200 p-2">5</div>
+        </x-componel-col>
+    </x-componel-row>
+    <x-componel-row class="h-64" flex-dir="row-reverse">
+        <x-componel-col cols="3">
+            <div class="text-gray-700 text-center bg-yellow-400 p-2">A</div>
+        </x-componel-col>
+        <x-componel-col cols="3" self="center">
+            <div class="text-gray-700 text-center bg-indigo-400 p-2">B</div>
+        </x-componel-col>
+    </x-componel-row>
+```
+
+- flex options: initial,1,auto,none,grow,grow-0,shrink,shrink-0,
+- order options: 1,2,3,4,5,6,7,8,9,10,11,12, first,last,none
+- self options: auto, start, center, end, stretch
+- flex-dir options: row, row-reverse, col, col-reverse
+
 ## Package Config
 
 For publishing package's config file run the bellow command
