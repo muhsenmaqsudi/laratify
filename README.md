@@ -232,8 +232,8 @@ Grids & Grid
 Col & Row
 
 ```blade
-    <x-componel-row class="bg-white mt-4 content-between" justify="center" wrap-cols>
-        <x-componel-col cols="6" md="4" xl="4">
+    <x-componel-row class="bg-white mt-4" wrap-cols>
+        <x-componel-col class="px-2" cols="6" md="4" xl="4">
             <div class="text-gray-700 text-center bg-blue-400 p-2">1</div>
         </x-componel-col>
         <x-componel-col cols="6" md="4" xl="4">
