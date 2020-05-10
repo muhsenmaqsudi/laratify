@@ -6,6 +6,8 @@ use Illuminate\View\Component;
 
 class Alert extends Component
 {
+    public $componentName = 'Alert';
+
     public $textColor;
     public $bgColor;
 
