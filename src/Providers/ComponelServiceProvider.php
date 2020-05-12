@@ -18,6 +18,7 @@ use Muhsenmaqsudi\Componel\View\Components\File;
 use Muhsenmaqsudi\Componel\View\Components\Grid;
 use Muhsenmaqsudi\Componel\View\Components\Grids;
 use Muhsenmaqsudi\Componel\View\Components\Input;
+use Muhsenmaqsudi\Componel\View\Components\Navbar;
 use Muhsenmaqsudi\Componel\View\Components\Radios;
 use Muhsenmaqsudi\Componel\View\Components\Row;
 use Muhsenmaqsudi\Componel\View\Components\Select;
@@ -59,7 +60,8 @@ class ComponelServiceProvider extends ServiceProvider
             Container::class,
             Col::class,
             Row::class,
-            Card::class
+            Card::class,
+            Navbar::class
         ]);
 
         Paginator::defaultView('pagination::default');
