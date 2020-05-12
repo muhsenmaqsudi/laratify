@@ -229,40 +229,42 @@ Grids & Grid
     </x-componel-grids>
 ```
 
-Col & Row
+Container, Col & Row
 
 ```blade
-    <x-componel-row class="bg-white mt-4" wrap-cols>
-        <x-componel-col class="px-2" cols="6" md="4" xl="4">
-            <div class="text-gray-700 text-center bg-blue-400 p-2">1</div>
-        </x-componel-col>
-        <x-componel-col cols="6" md="4" xl="4">
-            <div class="text-gray-700 text-center bg-red-400 p-2">2</div>
-        </x-componel-col>
-        <x-componel-col cols="6" md="4" xl="4">
-            <div class="text-gray-700 text-center bg-green-400 p-2">3</div>
+<x-componel-container class="py-5">
+    <x-componel-row class="h-64 border border-2 border-blue-500" flex-dir="col" align="center" justify="end">
+        <x-componel-col class="px-8" cols="6" md="4" xl="4">
+            <div class="text-center bg-blue-400 p-2">1</div>
         </x-componel-col>
         <x-componel-col cols="6" md="4" xl="4" order="first">
-            <div class="text-gray-700 text-center bg-green-300 p-2">4</div>
+            <div class="text-center bg-green-300 p-2">2</div>
         </x-componel-col>
         <x-componel-col cols="6" md="4" xl="4" flex="grow">
-            <div class="text-gray-700 text-center bg-green-200 p-2">5</div>
+            <div class="text-center bg-green-200 p-2">3</div>
         </x-componel-col>
     </x-componel-row>
-    <x-componel-row class="h-64" flex-dir="row-reverse">
+    <x-componel-row class="h-64 my-4 border border-2 border-blue-500" align="center" justify="center">
         <x-componel-col cols="3">
-            <div class="text-gray-700 text-center bg-yellow-400 p-2">A</div>
+            <div class="text-center bg-yellow-400 p-2">A</div>
         </x-componel-col>
-        <x-componel-col cols="3" self="center">
-            <div class="text-gray-700 text-center bg-indigo-400 p-2">B</div>
+        <x-componel-col cols="3" align-self="end">
+            <div class="text-center bg-indigo-400 p-2">B</div>
+        </x-componel-col>
+        <x-componel-col cols="3">
+            <div class="text-center bg-teal-400 p-2">C</div>
         </x-componel-col>
     </x-componel-row>
+</x-componel-container>
 ```
 
 - flex options: initial,1,auto,none,grow,grow-0,shrink,shrink-0,
 - order options: 1,2,3,4,5,6,7,8,9,10,11,12, first,last,none
-- self options: auto, start, center, end, stretch
+- align-self options: auto, start, center, end, stretch
 - flex-dir options: row, row-reverse, col, col-reverse
+- align option: stretch, start, center, end, baseline (flex's align-items)
+- justify options: start, center, end, between, around
+- align-content options: start, center, end, between, around
 
 ## Package Config
 
