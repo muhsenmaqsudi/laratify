@@ -10,6 +10,7 @@ use Muhsenmaqsudi\Componel\View\Components\Badge;
 use Muhsenmaqsudi\Componel\View\Components\Button;
 use Muhsenmaqsudi\Componel\View\Components\Checkbox;
 use Muhsenmaqsudi\Componel\View\Components\Col;
+use Muhsenmaqsudi\Componel\View\Components\Container;
 use Muhsenmaqsudi\Componel\View\Components\Dialog;
 use Muhsenmaqsudi\Componel\View\Components\Dropdown;
 use Muhsenmaqsudi\Componel\View\Components\File;
@@ -54,6 +55,7 @@ class ComponelServiceProvider extends ServiceProvider
             Tooltip::class,
             Grids::class,
             Grid::class,
+            Container::class,
             Col::class,
             Row::class
         ]);

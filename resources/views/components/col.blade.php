@@ -1,3 +1,3 @@
-<div class="{{ $colsWidth }} {{ $flex }} {{ $order }} {{ $self }} {{ $attributes['class'] }} {{ $responsiveClasses }}" {{ $attributes }}>
+<div class="{{ $mainClasses  }} {{ $attributes['class'] }}" {{ $attributes }}>
     {{ $slot }}
 </div>
