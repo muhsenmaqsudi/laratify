@@ -8,6 +8,7 @@ use Muhsenmaqsudi\Componel\Commands\UiCommand;
 use Muhsenmaqsudi\Componel\View\Components\Alert;
 use Muhsenmaqsudi\Componel\View\Components\Badge;
 use Muhsenmaqsudi\Componel\View\Components\Button;
+use Muhsenmaqsudi\Componel\View\Components\Card;
 use Muhsenmaqsudi\Componel\View\Components\Checkbox;
 use Muhsenmaqsudi\Componel\View\Components\Col;
 use Muhsenmaqsudi\Componel\View\Components\Container;
@@ -57,7 +58,8 @@ class ComponelServiceProvider extends ServiceProvider
             Grid::class,
             Container::class,
             Col::class,
-            Row::class
+            Row::class,
+            Card::class
         ]);
 
         Paginator::defaultView('pagination::default');
