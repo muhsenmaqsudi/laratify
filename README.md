@@ -232,30 +232,96 @@ Grids & Grid
 Container, Col & Row
 
 ```blade
-<x-componel-container class="py-5">
-    <x-componel-row class="h-64 border border-2 border-blue-500" flex-dir="col" align="center" justify="end">
-        <x-componel-col class="px-8" cols="6" md="4" xl="4">
-            <div class="text-center bg-blue-400 p-2">1</div>
-        </x-componel-col>
-        <x-componel-col cols="6" md="4" xl="4" order="first">
-            <div class="text-center bg-green-300 p-2">2</div>
-        </x-componel-col>
-        <x-componel-col cols="6" md="4" xl="4" flex="grow">
-            <div class="text-center bg-green-200 p-2">3</div>
-        </x-componel-col>
-    </x-componel-row>
-    <x-componel-row class="h-64 my-4 border border-2 border-blue-500" align="center" justify="center">
-        <x-componel-col cols="3">
-            <div class="text-center bg-yellow-400 p-2">A</div>
-        </x-componel-col>
-        <x-componel-col cols="3" align-self="end">
-            <div class="text-center bg-indigo-400 p-2">B</div>
-        </x-componel-col>
-        <x-componel-col cols="3">
-            <div class="text-center bg-teal-400 p-2">C</div>
-        </x-componel-col>
-    </x-componel-row>
-</x-componel-container>
+    <x-componel-container class="py-5">
+        <x-componel-row class="h-64 border border-2 border-blue-500" flex-dir="col" align="center" justify="end">
+            <x-componel-col class="px-8" cols="6" md="4" xl="4">
+                <div class="text-center bg-blue-400 p-2">1</div>
+            </x-componel-col>
+            <x-componel-col cols="6" md="4" xl="4" order="first">
+                <div class="text-center bg-green-300 p-2">2</div>
+            </x-componel-col>
+            <x-componel-col cols="6" md="4" xl="4" flex="grow">
+                <div class="text-center bg-green-200 p-2">3</div>
+            </x-componel-col>
+        </x-componel-row>
+        <x-componel-row class="h-64 my-4 border border-2 border-blue-500" align="center" justify="center">
+            <x-componel-col cols="3">
+                <div class="text-center bg-yellow-400 p-2">A</div>
+            </x-componel-col>
+            <x-componel-col cols="3" align-self="end">
+                <div class="text-center bg-indigo-400 p-2">B</div>
+            </x-componel-col>
+            <x-componel-col cols="3">
+                <div class="text-center bg-teal-400 p-2">C</div>
+            </x-componel-col>
+        </x-componel-row>
+    </x-componel-container>
+```
+
+Card
+
+```blade
+    <x-componel-container class="py-5">
+        <x-componel-row class="h-full my-4" wrap-cols>
+            <x-componel-col cols="full" sm="6" md="4" class="p-2" flex="shrink-0">
+                <x-componel-card title="Card Title" subtitle="Card Subtitle" title-class="text-center" subtitle-class="text-center">
+                    <x-slot name="title">
+                        <div class="text-blue-500">Card Title</div>
+                    </x-slot>
+                    <div class="text-sm leading-5 text-black px-4 py-5">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab asperiores cumque eos exercitationem
+                        ipsam
+                        quasi ratione? At consequatur deleniti exercitationem in labore laudantium odit quod repellat.
+                        Deleniti
+                        illo quod repellat.
+                    </div>
+                </x-componel-card>
+            </x-componel-col>
+            <x-componel-col cols="full" sm="6" md="4" class="p-2" flex="shrink-0">
+                <x-componel-card title="Card Title" subtitle="Card Subtitle">
+                    <div class="text-sm leading-5 text-gray-600 px-4 py-5">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab asperiores cumque eos exercitationem
+                        ipsam
+                        quasi ratione? At consequatur deleniti exercitationem in labore laudantium odit quod repellat.
+                        Deleniti
+                        illo quod repellat.
+                    </div>
+                </x-componel-card>
+            </x-componel-col>
+            <x-componel-col cols="full" sm="6" md="4" class="p-2" flex="shrink-0">
+                <x-componel-card title="Card Title" subtitle="Card Subtitle">
+                    <div class="text-sm leading-5 text-gray-600 px-4 py-5">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab asperiores cumque eos exercitationem
+                        ipsam
+                        quasi ratione? At consequatur deleniti exercitationem in labore laudantium odit quod repellat.
+                        Deleniti
+                        illo quod repellat.
+                    </div>
+                </x-componel-card>
+            </x-componel-col>
+        </x-componel-row>
+        
+        <x-componel-card title="Card Title" subtitle="Card Subtitle">
+            <dl>
+                <div class="bg-gray-100 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+                    <dt class="text-sm leading-5 font-medium text-gray-500">
+                        Full name
+                    </dt>
+                    <dd class="mt-1 text-sm leading-5 text-gray-900 sm:mt-0 sm:col-span-2">
+                        Muhsen Maqsudi
+                    </dd>
+                </div>
+                <div class="bg-white px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+                    <dt class="text-sm leading-5 font-medium text-gray-500">
+                        Job Title
+                    </dt>
+                    <dd class="mt-1 text-sm leading-5 text-gray-900 sm:mt-0 sm:col-span-2">
+                        Backend Developer
+                    </dd>
+                </div>
+            </dl>
+        </x-componel-card>
+    </x-componel-container>
 ```
 
 - flex options: initial,1,auto,none,grow,grow-0,shrink,shrink-0,
