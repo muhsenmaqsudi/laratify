@@ -257,6 +257,13 @@ Container, Col & Row
         </x-componel-row>
     </x-componel-container>
 ```
+- flex options: initial,1,auto,none,grow,grow-0,shrink,shrink-0,
+- order options: 1,2,3,4,5,6,7,8,9,10,11,12, first,last,none
+- align-self options: auto, start, center, end, stretch
+- flex-dir options: row, row-reverse, col, col-reverse
+- align option: stretch, start, center, end, baseline (flex's align-items)
+- justify options: start, center, end, between, around
+- align-content options: start, center, end, between, around
 
 Card
 
@@ -324,13 +331,28 @@ Card
     </x-componel-container>
 ```
 
-- flex options: initial,1,auto,none,grow,grow-0,shrink,shrink-0,
-- order options: 1,2,3,4,5,6,7,8,9,10,11,12, first,last,none
-- align-self options: auto, start, center, end, stretch
-- flex-dir options: row, row-reverse, col, col-reverse
-- align option: stretch, start, center, end, baseline (flex's align-items)
-- justify options: start, center, end, between, around
-- align-content options: start, center, end, between, around
+Navbar
+
+```blade
+    <x-componel-navbar :links="['URL link' => '/auth/login', 'Google' => 'https://google.com', 'Login' => 'login']">
+        <x-slot name="logo">
+            <img class="block lg:hidden h-8 w-auto"
+                 src="https://tailwindui.com//img/logos/workflow-mark-on-dark.svg" alt=""/>
+            <img class="hidden lg:block h-8 w-auto"
+                 src="https://tailwindui.com/img/logos/workflow-logo-on-dark.svg" alt=""/>
+        </x-slot>
+        <x-slot name="profileDropdown">
+            <a href="#"
+               class="block px-4 py-2 text-sm leading-5 text-gray-700 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 transition duration-150 ease-in-out">Your
+                Profile</a>
+            <a href="#"
+               class="block px-4 py-2 text-sm leading-5 text-gray-700 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 transition duration-150 ease-in-out">Settings</a>
+            <a href="#"
+               class="block px-4 py-2 text-sm leading-5 text-gray-700 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 transition duration-150 ease-in-out">Sign
+                out</a>
+        </x-slot>
+    </x-componel-navbar>
+```
 
 ## Package Config
 
