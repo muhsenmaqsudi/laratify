@@ -354,6 +354,49 @@ Navbar
     </x-componel-navbar>
 ```
 
+Table
+
+```blade
+    <x-componel-table stripped hover 
+        :columns="[
+            'name' => 'Name',
+            'title' => 'Title',
+            'status' => 'Status',
+            'role' => 'Role'
+         ]"
+        :rows="[
+            [
+                'id' => 1,
+                'name' => 'Bernard Lane',
+                'title' => 'Human Resources',
+                'status' => 'Active',
+                'role' => 'Owner'
+            ],
+            [
+                'id' => 2,
+                'name' => 'Muhsen Maqsudi',
+                'title' => 'Backend Developer',
+                'status' => 'Inactive',
+                'role' => 'Admin'
+            ],
+            [
+                'id' => 3,
+                'name' => 'Muhsen Maqsudi',
+                'title' => 'Backend Developer',
+                'status' => 'Inactive',
+                'role' => 'Admin'
+            ],
+         ]"
+        :actions="[
+                'show' => 'get_view_route_name',
+                'edit' => 'get_edit_route_name',
+                'delete' => 'get_edit_route_delete'
+         ]"
+         actions-custom-view="components.partials.my-action"
+    >
+    </x-componel-table>
+```
+
 ## Package Config
 
 For publishing package's config file run the bellow command
