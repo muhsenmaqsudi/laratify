@@ -22,7 +22,9 @@ use Muhsenmaqsudi\Componel\View\Components\Navbar;
 use Muhsenmaqsudi\Componel\View\Components\Radios;
 use Muhsenmaqsudi\Componel\View\Components\Row;
 use Muhsenmaqsudi\Componel\View\Components\Select;
+use Muhsenmaqsudi\Componel\View\Components\Tab;
 use Muhsenmaqsudi\Componel\View\Components\Table;
+use Muhsenmaqsudi\Componel\View\Components\Tabs;
 use Muhsenmaqsudi\Componel\View\Components\Textarea;
 use Muhsenmaqsudi\Componel\View\Components\Tooltip;
 
@@ -63,7 +65,9 @@ class ComponelServiceProvider extends ServiceProvider
             Row::class,
             Card::class,
             Navbar::class,
-            Table::class
+            Table::class,
+            Tabs::class,
+            Tab::class
         ]);
 
         Paginator::defaultView('pagination::default');
