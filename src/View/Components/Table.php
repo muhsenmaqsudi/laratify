@@ -1,6 +1,6 @@
 <?php
 
-namespace Muhsenmaqsudi\Componel\View\Components;
+namespace Muhsenmaqsudi\Laratify\View\Components;
 
 use Illuminate\View\Component;
 
@@ -40,6 +40,6 @@ class Table extends Component
      */
     public function render()
     {
-        return view('componel::components.table');
+        return view('laratify::components.table');
     }
 }

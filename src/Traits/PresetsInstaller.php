@@ -1,8 +1,8 @@
 <?php
 
-namespace Muhsenmaqsudi\Componel\Traits;
+namespace Muhsenmaqsudi\Laratify\Traits;
 
-use Muhsenmaqsudi\Componel\Presets\TailwindCSS;
+use Muhsenmaqsudi\Laratify\Presets\TailwindCSS;
 
 trait PresetsInstaller
 {

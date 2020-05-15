@@ -1,9 +1,9 @@
 <?php
 
-namespace Muhsenmaqsudi\Componel\View\Components;
+namespace Muhsenmaqsudi\Laratify\View\Components;
 
 use Illuminate\View\Component;
-use Muhsenmaqsudi\Componel\Traits\HasButtonMethods;
+use Muhsenmaqsudi\Laratify\Traits\HasButtonMethods;
 
 class Button extends Component
 {
@@ -29,7 +29,7 @@ class Button extends Component
      */
     public function __construct(array $events = [], $variant = null, $size = 'text-xs', $rounded = false, $outline = false, $id = null)
     {
-        $this->variant = $variant ? $variant : config('componel.background-base-color');
+        $this->variant = $variant ? $variant : config('laratify.background-base-color');
         $this->outline = $outline;
         $this->size = $size;
         $this->rounded = $rounded;
@@ -46,6 +46,6 @@ class Button extends Component
      */
     public function render()
     {
-        return view('componel::components.button');
+        return view('laratify::components.button');
     }
 }

@@ -1,9 +1,9 @@
 <?php
 
-namespace Muhsenmaqsudi\Componel\View\Components;
+namespace Muhsenmaqsudi\Laratify\View\Components;
 
 use Illuminate\View\Component;
-use Muhsenmaqsudi\Componel\Traits\MakeResponsiveClasses;
+use Muhsenmaqsudi\Laratify\Traits\MakeResponsiveClasses;
 
 class Col extends Component
 {
@@ -54,6 +54,6 @@ class Col extends Component
      */
     public function render()
     {
-        return view('componel::components.col');
+        return view('laratify::components.col');
     }
 }

@@ -1,7 +1,7 @@
 <?php
 
 
-namespace Muhsenmaqsudi\Componel\Traits;
+namespace Muhsenmaqsudi\Laratify\Traits;
 
 
 trait HasButtonMethods

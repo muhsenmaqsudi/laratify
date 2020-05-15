@@ -1,6 +1,6 @@
 {
-    "name": "muhsenmaqsudi/laravel-componel",
-    "description": "a Laravel 7 Component Base UI Panel Package using TailwindCSS & AlpineJS",
+    "name": "muhsenmaqsudi/laratify",
+    "description": "Laratify is a Laravel 7 UI Library with beautifully handcrafted components using TailwindCSS & AlpineJS",
     "license": "MIT",
     "authors": [
         {
@@ -20,18 +20,18 @@
     },
     "autoload": {
         "psr-4": {
-            "Muhsenmaqsudi\\Componel\\": "src/"
+            "Muhsenmaqsudi\\Laratify\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Muhsenmaqsudi\\Componel\\Tests\\": "tests/"
+            "Muhsenmaqsudi\\Laratify\\Tests\\": "tests/"
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "Muhsenmaqsudi\\Componel\\Providers\\ComponelServiceProvider"
+                "Muhsenmaqsudi\\Laratify\\Providers\\LaratifyServiceProvider"
             ]
         }
     },

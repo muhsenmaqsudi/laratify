@@ -1,10 +1,10 @@
 <?php
 
-namespace Muhsenmaqsudi\Componel\View\Components;
+namespace Muhsenmaqsudi\Laratify\View\Components;
 
 use Illuminate\View\Component;
-use Muhsenmaqsudi\Componel\Traits\HasInputAttributes;
-use Muhsenmaqsudi\Componel\Traits\OptionFormatter;
+use Muhsenmaqsudi\Laratify\Traits\HasInputAttributes;
+use Muhsenmaqsudi\Laratify\Traits\OptionFormatter;
 
 class Select extends Component
 {
@@ -42,6 +42,6 @@ class Select extends Component
      */
     public function render()
     {
-        return view('componel::components.select');
+        return view('laratify::components.select');
     }
 }

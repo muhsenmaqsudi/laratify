@@ -5,7 +5,7 @@
     @if($activator)
         {{ $activator }}
     @else
-        <x-componel-button :events="['click' => 'toggleDialog()']">Open Dialog</x-componel-button>
+        <x-laratify-button :events="['click' => 'toggleDialog()']">Open Dialog</x-laratify-button>
     @endif
 
     <div
@@ -59,9 +59,9 @@
                                 {{ $footer  }}
                             @else
                                 @unless($noClose)
-                                    <x-componel-button :events="['click' => 'toggleDialog()']" variant="red-500" outline>
+                                    <x-laratify-button :events="['click' => 'toggleDialog()']" variant="red-500" outline>
                                         {{ $closeTitle }}
-                                    </x-componel-button>
+                                    </x-laratify-button>
                                 @endunless
                                 <button
                                         class="text-red-500 bg-transparent font-bold uppercase px-6 py-2 text-sm outline-none focus:outline-none mr-1 mb-1"

@@ -1,11 +1,11 @@
 <?php
 
-namespace Muhsenmaqsudi\Componel\View\Components;
+namespace Muhsenmaqsudi\Laratify\View\Components;
 
 use Illuminate\Support\Str;
 use Illuminate\View\Component;
-use Muhsenmaqsudi\Componel\Traits\HasInputAttributes;
-use Muhsenmaqsudi\Componel\Traits\OptionFormatter;
+use Muhsenmaqsudi\Laratify\Traits\HasInputAttributes;
+use Muhsenmaqsudi\Laratify\Traits\OptionFormatter;
 
 class Radios extends Component
 {
@@ -40,6 +40,6 @@ class Radios extends Component
      */
     public function render()
     {
-        return view('componel::components.radios');
+        return view('laratify::components.radios');
     }
 }

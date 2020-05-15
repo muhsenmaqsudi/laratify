@@ -1,10 +1,10 @@
 <?php
 
-namespace Muhsenmaqsudi\Componel\Commands;
+namespace Muhsenmaqsudi\Laratify\Commands;
 
 use Illuminate\Console\Command;
-use Muhsenmaqsudi\Componel\Presets\Preset;
-use Muhsenmaqsudi\Componel\Traits\PresetsInstaller;
+use Muhsenmaqsudi\Laratify\Presets\Preset;
+use Muhsenmaqsudi\Laratify\Traits\PresetsInstaller;
 
 class UiCommand extends Command
 {
@@ -18,7 +18,7 @@ class UiCommand extends Command
      *
      * @var string
      */
-    protected $signature = 'componel:ui  
+    protected $signature = 'laratify:ui
         { --auth : Install authentication UI scaffolding }';
 
     /**

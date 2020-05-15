@@ -1,9 +1,9 @@
 <?php
 
-namespace Muhsenmaqsudi\Componel\Tests\Feature;
+namespace Muhsenmaqsudi\Laratify\Tests\Feature;
 
-use Muhsenmaqsudi\Componel\Tests\TestCase;
-use Muhsenmaqsudi\Componel\View\Components\Alert;
+use Muhsenmaqsudi\Laratify\Tests\TestCase;
+use Muhsenmaqsudi\Laratify\View\Components\Alert;
 
 class AlertComponentTest extends TestCase
 {

@@ -1,7 +1,7 @@
 <?php
 
 
-namespace Muhsenmaqsudi\Componel\Presets;
+namespace Muhsenmaqsudi\Laratify\Presets;
 
 use Illuminate\Filesystem\Filesystem;
 use Illuminate\Support\Arr;

@@ -1,6 +1,6 @@
 <?php
 
-namespace Muhsenmaqsudi\Componel\Presets;
+namespace Muhsenmaqsudi\Laratify\Presets;
 
 use Illuminate\Container\Container;
 use Illuminate\Filesystem\Filesystem;
@@ -10,7 +10,7 @@ use Symfony\Component\Finder\SplFileInfo;
 /**
  * Class Preset
  * @copyright Laravel/Ui
- * @package Muhsenmaqsudi\Componel\Presets
+ * @package Muhsenmaqsudi\Laratify\Presets
  */
 class Preset
 {

@@ -22,7 +22,7 @@
                                 {{ is_array($row) ? $row[$column_key] : $row->{$column_key} }}
                             </td>
                         @endforeach
-                        @includeWhen($actions, $actionsCustomView ? $actionsCustomView : 'componel::components.table-actions', compact('row', 'actions'))
+                        @includeWhen($actions, $actionsCustomView ? $actionsCustomView : 'laratify::components.table-actions', compact('row', 'actions'))
                         @endforeach
                     </tr>
                 </tbody>

@@ -1,9 +1,9 @@
 <?php
 
-namespace Muhsenmaqsudi\Componel\View\Components;
+namespace Muhsenmaqsudi\Laratify\View\Components;
 
 use Illuminate\View\Component;
-use Muhsenmaqsudi\Componel\Traits\HasInputAttributes;
+use Muhsenmaqsudi\Laratify\Traits\HasInputAttributes;
 
 class File extends Component
 {
@@ -34,6 +34,6 @@ class File extends Component
      */
     public function render()
     {
-        return view('componel::components.file');
+        return view('laratify::components.file');
     }
 }

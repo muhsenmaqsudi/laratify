@@ -1,14 +1,14 @@
 <?php
 
-namespace Muhsenmaqsudi\Componel\Tests;
+namespace Muhsenmaqsudi\Laratify\Tests;
 
 use Illuminate\Support\Facades\View;
-use Muhsenmaqsudi\Componel\Providers\ComponelServiceProvider;
+use Muhsenmaqsudi\Laratify\Providers\LaratifyServiceProvider;
 use Orchestra\Testbench\TestCase as BaseTestCase;
 
 class TestCase extends BaseTestCase
 {
-    public $hintPath = 'componel::components';
+    public $hintPath = 'laratify::components';
     public $baseBgColor = 'bg-green-500';
     public $baseTextColor = 'text-white';
 
@@ -20,7 +20,7 @@ class TestCase extends BaseTestCase
 
     private function loadComponents(): void
     {
-        $service = new ComponelServiceProvider($this->app);
+        $service = new LaratifyServiceProvider($this->app);
         $service->boot();
     }
 

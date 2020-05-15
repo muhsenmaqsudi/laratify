@@ -1,10 +1,10 @@
 <?php
 
-namespace Muhsenmaqsudi\Componel\View\Components;
+namespace Muhsenmaqsudi\Laratify\View\Components;
 
 use Illuminate\Support\Str;
 use Illuminate\View\Component;
-use Muhsenmaqsudi\Componel\Traits\HasInputAttributes;
+use Muhsenmaqsudi\Laratify\Traits\HasInputAttributes;
 
 class Input extends Component
 {
@@ -47,6 +47,6 @@ class Input extends Component
      */
     public function render()
     {
-        return view('componel::components.input');
+        return view('laratify::components.input');
     }
 }

@@ -1,9 +1,9 @@
 <?php
 
-namespace Muhsenmaqsudi\Componel\View\Components;
+namespace Muhsenmaqsudi\Laratify\View\Components;
 
 use Illuminate\View\Component;
-use Muhsenmaqsudi\Componel\Traits\MakeResponsiveClasses;
+use Muhsenmaqsudi\Laratify\Traits\MakeResponsiveClasses;
 
 class Grid extends Component
 {
@@ -38,9 +38,8 @@ class Grid extends Component
      *
      * @return \Illuminate\View\View|string
      */
-    public
-    function render()
+    public function render()
     {
-        return view('componel::components.grid');
+        return view('laratify::components.grid');
     }
 }

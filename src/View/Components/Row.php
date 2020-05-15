@@ -1,6 +1,6 @@
 <?php
 
-namespace Muhsenmaqsudi\Componel\View\Components;
+namespace Muhsenmaqsudi\Laratify\View\Components;
 
 use Illuminate\View\Component;
 
@@ -44,6 +44,6 @@ class Row extends Component
      */
     public function render()
     {
-        return view('componel::components.row');
+        return view('laratify::components.row');
     }
 }

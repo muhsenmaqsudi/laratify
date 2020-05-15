@@ -1,6 +1,6 @@
 <?php
 
-namespace Muhsenmaqsudi\Componel\Traits;
+namespace Muhsenmaqsudi\Laratify\Traits;
 
 use Illuminate\Support\Arr;
 

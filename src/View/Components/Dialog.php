@@ -1,9 +1,9 @@
 <?php
 
-namespace Muhsenmaqsudi\Componel\View\Components;
+namespace Muhsenmaqsudi\Laratify\View\Components;
 
 use Illuminate\View\Component;
-use Muhsenmaqsudi\Componel\Traits\HasDialogMethods;
+use Muhsenmaqsudi\Laratify\Traits\HasDialogMethods;
 
 class Dialog extends Component
 {
@@ -57,6 +57,6 @@ class Dialog extends Component
      */
     public function render()
     {
-        return view('componel::components.dialog');
+        return view('laratify::components.dialog');
     }
 }
