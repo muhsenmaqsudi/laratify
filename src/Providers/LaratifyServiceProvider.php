@@ -38,7 +38,9 @@ class LaratifyServiceProvider extends ServiceProvider
             ]);
         }
 
+        $this->mergeConfigFrom(__DIR__.'/../../config/laratify.php', 'laratify');
         $this->loadViewsFrom(__DIR__ . '/../../resources/views', 'laratify');
+
         $this->publishes([__DIR__ . '/../../resources/views' => resource_path('views/vendor/laratify')], 'laratify-views');
 
         $this->publishes([
