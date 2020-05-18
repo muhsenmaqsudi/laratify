@@ -11,6 +11,7 @@ use Muhsenmaqsudi\Laratify\View\Components\Button;
 use Muhsenmaqsudi\Laratify\View\Components\Card;
 use Muhsenmaqsudi\Laratify\View\Components\Checkbox;
 use Muhsenmaqsudi\Laratify\View\Components\Col;
+use Muhsenmaqsudi\Laratify\View\Components\Collapse;
 use Muhsenmaqsudi\Laratify\View\Components\Container;
 use Muhsenmaqsudi\Laratify\View\Components\Dialog;
 use Muhsenmaqsudi\Laratify\View\Components\Dropdown;
@@ -69,7 +70,8 @@ class LaratifyServiceProvider extends ServiceProvider
             Navbar::class,
             Table::class,
             Tabs::class,
-            Tab::class
+            Tab::class,
+            Collapse::class
         ]);
 
         Paginator::defaultView('pagination::default');

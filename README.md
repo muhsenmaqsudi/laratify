@@ -428,6 +428,29 @@ Tabs & Tab
     </x-laratify-tabs>
 ```
 
+Collapse
+
+```blade
+        <x-laratify-collapse class="w-1/2 m-2">
+            <x-slot name="activator">
+                <button
+                    class="bg-pink-500 text-white active:bg-pink-600 font-bold uppercase text-xs px-4 py-2 rounded shadow hover:shadow-md outline-none focus:outline-none mr-1 mb-1"
+                    @click="isOpen = !isOpen">
+                    Collapse
+                </button>
+            </x-slot>
+            <x-laratify-card title="Card Title" subtitle="Card Subtitle">
+                <div class="text-sm leading-5 text-gray-600 px-4 py-5">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab asperiores cumque eos exercitationem
+                    ipsam
+                    quasi ratione? At consequatur deleniti exercitationem in labore laudantium odit quod repellat.
+                    Deleniti
+                    illo quod repellat.
+                </div>
+            </x-laratify-card>
+        </x-laratify-collapse>
+```
+
 ## Package Config
 
 For publishing package's config file run the bellow command
